@@ -37,4 +37,4 @@ class Canvas(object):
         self._rows[y,x_] = list(text)
         
     def __str__(self):
-        return "\n".join( for row in self._rows)
+        return "\n".join("".join(l for l in row) for row in self._rows)
